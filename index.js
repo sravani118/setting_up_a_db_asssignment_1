@@ -1,5 +1,5 @@
 const express = require('express');
-const resolve  = require('path');
+const { resolve } = require('path');
 const mongoose = require('mongoose');
 
 const app = express();
@@ -9,7 +9,7 @@ app.use(express.static('static'));
 
 
 
-const DB_URL = 'mongodb+srv://lokeswara:techabbayi@cluster0.riph9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const DB_URL = 'mongodb+srv://sravani:sravani89192@practiceassignments.ano3w.mongodb.net/?retryWrites=true&w=majority&appName=practiceassignments';
 
 mongoose.connect(DB_URL)
 .then(()=>{console.log('Mongodb connected Successfully!')})
@@ -21,5 +21,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Node JS Server listening on http://localhost:${port}`);
+  console.log(`Example app listening at http://localhost:${port}`);
 });
